@@ -53,6 +53,7 @@ const Move = () => {
       transition: { duration: 0.2, ease: "easeOut" },
     });
   };
+  //test2
 
   const handleRefreshWithAnimation = () => {
     // Animasi saat manual refresh
