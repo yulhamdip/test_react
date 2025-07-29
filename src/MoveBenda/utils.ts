@@ -23,3 +23,4 @@ export const getPointColor = (index: number): string => {
   ];
   return colors[index % colors.length];
 };
+//test
