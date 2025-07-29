@@ -1,0 +1,152 @@
+.move-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.data-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.map-section {
+  flex: 1;
+  min-width: 400px;
+}
+
+.movement-map {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border: 2px solid #333;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.coordinate-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.grid-line-vertical {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #999;
+}
+
+.grid-line-horizontal {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+}
+
+.movement-point {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.movement-point:hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.movement-point.selected {
+  transform: translate(-50%, -50%) scale(1.3);
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+.movement-label {
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+  max-height: 300px;
+  max-width: 500px;
+  overflow-y: auto;
+}
+
+.data-item {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.data-item:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.data-item.selected {
+  border-color: #2196f3;
+  background: #e3f2fd;
+}
+
+.coordinates {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.timestamp {
+  color: #999;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.map-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.control-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-button:hover {
+  background: #f0f0f0;
+}
+
+.control-button.active {
+  background: #2196f3;
+  color: white;
+  border-color: #2196f3;
+}
